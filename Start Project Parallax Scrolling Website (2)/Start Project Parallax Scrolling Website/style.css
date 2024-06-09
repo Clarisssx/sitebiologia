@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background: #001f27;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+header {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 2em;
+    color: #fff;
+    pointer-events: none;
+    margin-right: 670px;
+    margin-left: 100px;
+}
+.navigation a {
+    text-decoration: none;
+    color: #fff;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin:  0 10px;
+    font-weight: 600;
+}
+.navigation a:hover, .navigation a.active {
+    background: #359381;
+    color: #fff;
+}
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* To ensure elements don't overflow the viewport */
+}
+#text {
+    position: absolute;
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    z-index: 10; /* Ensures text is above other elements initially */
+    transition: opacity 0.5s; /* Smooth transition for opacity */
+}
+.parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    transition: transform 0.5s; /* Add transition for smooth effect */
+}
+.btn-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    top: 70%; /* Adjust as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9; /* Lower than text but higher than background */
+    transition: opacity 0.5s; /* Smooth transition for opacity */
+}
+.btn-box a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    background: #48ffdd;
+    border: 2px solid #48ffdd;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.btn-box a:hover{
+    background: #359381;
+    border: 2px solid #359381;
+    color: #fff;
+}
+.btn-box a:nth-child(2):hover{
+    background: #359381;
+    border: 2px solid #359381;
+    color: #fff;
+}
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #48ffdd;
+}
+.sec {
+    position: relative;
+    background: #003329;
+    padding: 100px;
+    z-index: 1; /* Ensures .sec is above the buttons */
+}
+.sec h2 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 50px;
+}
+.sec p {
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+}
+.C1{
+    color: #359381;
+    margin-left: 100px;
+    margin-top: 50px;
+    font-size: 2.5em;
+}
+.C2{
+    color: #fff;
+    margin-left: 230px;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+img{
+    width: 100%; /* Defina o tamanho desejado */
+    height: auto; /* Para manter a proporção */
+}
+.card{
+    max-width: 350px;
+    margin: 20px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+    position: relative;
+}
+.carac{
+    height: auto;
+    width: 100%;
+    border-radius: 3px;
+}
+.into h1{
+    margin: 10px;
+    font-size: 25px;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s; /* Smooth transition for opacity */
+}
+.into{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 20, 26, 0.95);
+    color: white;
+    transition: .5s;
+    transform: translateY(150px);
+    opacity: 0;
+}
+
+.into p{
+    font-size: 18px;
+    margin: 20px;
+    visibility: hidden;
+    opacity: 0;
+}
+span{
+    font-weight: bold;
+}
+.card:hover .into{
+    transform: translateY(0);
+    opacity: 1;
+}
+.card:hover .into p{
+    opacity: 1;
+    visibility: visible;
+}
+.card:hover .carac{
+    transform: scale(1.1) rotate(-3deg);
+}
+.card:hover img {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
